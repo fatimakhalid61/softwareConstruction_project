@@ -28,8 +28,8 @@
           <div class="u-nav-container">
             <ul class="u-nav u-unstyled u-nav-1">
             <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a></li>
-            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html#about" style="padding: 10px 20px;">About Us</a></li>
-            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html#contact" style="padding: 10px 20px;">Contact Us</a></li>
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#about" style="padding: 10px 20px;">About Us</a></li>
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#contact" style="padding: 10px 20px;">Contact Us</a></li>
             <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="login.html" style="padding: 10px 20px;">Login</a></li>
             <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="register.html" style="padding: 10px 20px;">Register</a></li>
           </ul>
@@ -40,8 +40,8 @@
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
                   <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a></li>
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#about">About Us</a></li>
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#contact">Contact Us</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#about">About Us</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#contact">Contact Us</a></li>
                   <li class="u-nav-item"><a class="u-button-style u-nav-link" href="login.html">Login</a></li>
                   <li class="u-nav-item"><a class="u-button-style u-nav-link" href="register.html">Register</a></li>
                 </ul>
@@ -63,20 +63,29 @@
                       <form action="#">
                         <br>
                         <div class="account-details">
-                            <input type="radio" name="account" id="dot-1">
-                            <input type="radio" name="account" id="dot-2">
-                            <span class="account-title">Choose an account type</span>
-                            <div class="category">
-                              <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="account">Doctor</span>
-                              </label>
-                              <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="account">Patient</span>
-                              </label>
-                            </div>
-                          </div>
+                          <span class="details">Choose an account type</span>
+                          <br>
+                          <label class="radio">
+                            <span class="radio__input">
+                              <input type="radio" name="radio" />
+                              <span class="radio__control"></span>
+                            </span>
+                            <span class="radio__label">
+                              Doctor 
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                          </label>
+
+                          <label class="radio">
+                            <span class="radio__input">
+                              <input type="radio" name="radio" />
+                              <span class="radio__control"></span>
+                            </span>
+                            <span class="radio__label">Patient</span>
+                          </label>
+                        </div>
+                        <br>
+
                         <div class="user-details">
                             
                           <div class="input-box">
@@ -104,28 +113,36 @@
                             <input type="password" placeholder="Confirm your password" required>
                           </div>
                         </div>
+
                         <div class="gender-details">
-                          <input type="radio" name="gender" id="dot-1">
-                          <input type="radio" name="gender" id="dot-2">
-                          <input type="radio" name="gender" id="dot-3">
-                          <span class="gender-title">Gender</span>
-                          <div class="category">
-                            <label for="dot-1">
-                            <span class="dot one"></span>
-                            <span class="gender">Male</span>
+                          <span class="details">Gender</span>
+                          <br>
+                          <label class="radio">
+                            <span class="radio__input">
+                              <input type="radio" name="radio" />
+                              <span class="radio__control"></span>
+                            </span>
+                            <span class="radio__label"> Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                           </label>
-                          <label for="dot-2">
-                            <span class="dot two"></span>
-                            <span class="gender">Female</span>
+
+                          <label class="radio">
+                            <span class="radio__input">
+                              <input type="radio" name="radio" />
+                              <span class="radio__control"></span>
+                            </span>
+                            <span class="radio__label"> Female &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                           </label>
-                          <label for="dot-3">
-                            <span class="dot three"></span>
-                            <span class="gender">Prefer not to say</span>
-                            </label>
-                          </div>
+
+                          <label class="radio">
+                            <span class="radio__input">
+                              <input type="radio" name="radio" />
+                              <span class="radio__control"></span>
+                            </span>
+                            <span class="radio__label">Prefer Not to Say</span>
+                          </label>
                         </div>
                         <div class="button">
-                          <input type="submit" value="Register">
+                          <input type="submit" value="REGISTER">
                         </div>
                       </form>
                     </div>
@@ -137,15 +154,10 @@
       </div>
     </section>
     
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-e590"><div class="u-clearfix u-sheet u-sheet-1">
-      <p class="u-small-text u-text u-text-variant u-text-1"><b>ABOUT</b><br/>This website belongs to the repective owner. Created by the students of NUST, Islamabad.</p>
-    <p><b>LANGUAGE</b><br/>English</p>
-    <p><b>QUICK LINKS</b><br/><a href="Home.html#about">About Us</a><br/><a href="Home.html#contact">Contact Us</a></p>
-    </div></footer>
-  <section class="u-backlink u-clearfix u-grey-80">
-    <p class="u-text">
-      <span>Copyright © 2021 All Rights Reserved by Team MEDIcare.</span>
-    </p> 
-  </section>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <p class="u-text">
+        <span>Copyright © 2021 All Rights Reserved by Team MEDIcare.</span>
+      </p> 
+    </section>
   </body>
 </html>
