@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Generate Invoice</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <style>
+      .invoice {
+        margin-bottom: 15px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        background: black;
+        padding: 0 17px;
+      }
+      .border {
+        border: 1px solid #e5e5e5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container" id="invoice">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 border">
+          <div class="row">
+            <div class="col-md-12 invoice text-center text-primary">
+              <h2>Invoice</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-right">
+                <p><strong>Invoice No: </strong> 00002</p>
+                <p><strong>Date: </strong> 26/05/2021</p>
+                <p>Pakistan, Faisalabad</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 well invoice-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Description</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Registration Fee</td>
+                      <td>Rs/-300</td>
+                    </tr>
+                    <tr>
+                      <td>Healthcare Services</td>
+                      <td>Rs/-700</td>
+                    </tr>
+                    <tr>
+                      <td>Medicines Recommendation</td>
+                      <td>Rs/-600</td>
+                    </tr>
+                    <tr>
+                      <td>Extra Charges</td>
+                      <td>Rs/-400</td>
+                    </tr>
+                    <tr>
+                      <td>PCR Test for the presence of COVID</td>
+                      <td>Rs/-6500</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><strong>Total</strong></td>
+                      <td><strong>Rs/-8500</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-11 text-right mt-2 mb-2"><strong>Clinic </strong> MEDICARE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-12 text-center mb-4">
+          <button class="btn btn-warning" id="downloadPdf">
+            Generate Invoice
+          </button>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-md-12 text-center mb-4">
+          <a href="billing.html"><button class="btn btn-warning">
+            Online Payment
+          </button></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document
+      .getElementById("downloadPdf")
+      .addEventListener("click", function() {
+        const element = document.getElementById("invoice");
+        html2pdf()
+          .from(element)
+          .save();
+      });
+  </script>
+  <script>
+  document.getElementById("app").innerHTML = ``;
+</script>
+</html>
