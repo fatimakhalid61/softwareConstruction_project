@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Edit Doctor Profile</title>
+    <link rel="stylesheet" href="project.css" media="screen">
+    <link rel="stylesheet" href="Home.css" media="screen">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="project.js" defer=""></script>
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Oswald:200,300,400,500,600,700">
+
+    <!-- JQUERY Library to add and remove button -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-9f38"><div class="u-clearfix u-sheet u-sheet-1">
+          <img src="images/logo_img.jpg" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1">
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a></li>
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html#about" style="padding: 10px 20px;">About Us</a></li>
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html#contact" style="padding: 10px 20px;">Contact Us</a></li>
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" style="padding: 10px 20px;">Profile</a></li>
+            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="login.html" style="padding: 10px 20px;">Logout</a></li>
+          </ul>
+          </div>
+          <div class="u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#about">About Us</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#contact">Contact Us</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Profile</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="login.html">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    
+    <section class="u-clearfix u-image u-valign-middle-lg u-section-1" id="carousel_8865">
+      <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-26 u-layout-cell-2">
+              <div class="u-container-layout">
+                <div class="container">
+                    <div class="title">EDIT DOCTOR PROFILE</div>
+                    <div class="info">You can Edit your Information Here.</div>
+                    <div class="content">
+                      <h2 class="heading1"><i style="color: #ff1456" class="fa fa-arrow-circle-right"></i>&nbsp;DOCTOR PERSONAL DETAILS</h2>
+                      <form action="#">
+                        <div class="user-details">
+                            
+                          <div class="input-box">
+                            <span class="details">Doctor Name</span>
+                            <input type="text" placeholder="Doctor Name" required>
+                          </div>
+
+                          <div class="input-box">
+                            <span class="details">Email</span>
+                            <input type="text" placeholder="Email Address" required>
+                          </div>
+
+                          <div class="input-box">
+                            <span class="details">Phone Number</span>
+                            <input type="text" placeholder="Phone Number" required>
+                            <br>
+                          </div>
+                        </div>
+
+                      <h2 class="heading1"><i style="color: #ff1456" class="fa fa-arrow-circle-right"></i>&nbsp;DOCTOR EDUCATION</h2>
+                        <div class="field_wrapper_1 user-details">
+                          <div class="input-box">
+                            <span class="details">Degree Name</span>
+                            <input type="text" placeholder="Doctor Name" required>
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Institute Name</span>
+                            <input type="text" placeholder="Institute Name" required>
+                          </div>
+                          <a href="javascript:void(0);" class="add_button_1" title="Add field"><i style="font-size: 15px; color: steelblue" class="fa fa-plus-circle"></i>&nbsp; <text style="color:steelblue; font-size: 15px;">Click to Add More</text></a>
+                        </div>
+                     
+
+                      <h2 class="heading1"><i style="color: #ff1456" class="fa fa-arrow-circle-right"></i>&nbsp;PAST EXPERIENCES</h2>
+                        <div class="field_wrapper_2 user-details">
+                          <div class="input-box">
+                            <span class="details">Health Sector Name</span>
+                            <input type="text" placeholder="Health Sector Name" required>
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Position</span>
+                            <input type="text" placeholder="Position" required>
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Years of Experience</span>
+                            <input type="text" placeholder="Years of Experience" required>
+                          </div>
+                          <a href="javascript:void(0);" class="add_button_2" title="Add field"><i style="font-size: 15px; color: steelblue" class="fa fa-plus-circle"></i>&nbsp; <text style="color:steelblue; font-size: 15px;">Click to Add More</text></a>
+                        </div>
+
+                        <h2 class="heading1"><i style="color: #ff1456" class="fa fa-arrow-circle-right"></i>&nbsp;CERTIFICATIONS</h2>
+                        <div class="field_wrapper_3 user-details">
+                          <div class="input-box">
+                            <span class="details">Certificate Name</span>
+                            <input type="text" placeholder="Certificate Name" required>
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Organization</span>
+                            <input type="text" placeholder="Organization" required>
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Certificate Link</span>
+                            <input type="text" placeholder="Certificate Link" required>
+                          </div>
+                          <a href="javascript:void(0);" class="add_button_3" title="Add field"><i style="font-size: 15px; color: steelblue" class="fa fa-plus-circle"></i>&nbsp; <text style="color:steelblue; font-size: 15px;">Click to Add More</text></a>
+                        </div>
+
+                        <h2 class="heading1"><i style="color: #ff1456" class="fa fa-arrow-circle-right"></i>&nbsp;SOCIAL LINKS</h2>
+                        <br>
+                        <text style="color:tomato;">Note: Not Mandatory</text>
+                        <div class="user-details">
+                          <div class="input-box">
+                            <span class="details"><i class="fa fa-facebook"></i>&nbsp; Facebook</span>
+                            <input type="text" placeholder="Facebook Profile URL">
+                          </div>
+                          <div class="input-box">
+                            <span class="details"><i class="fa fa-linkedin"></i>&nbsp; LinkedIn</span>
+                            <input type="text" placeholder="LinkedIn Profile URL">
+                          </div>
+                          <div class="input-box">
+                            <span class="details"><i class="fa fa-twitter"></i>&nbsp; Twitter</span>
+                            <input type="text" placeholder="Twitter Profile URL">
+                          </div>
+                        </div>
+                    
+                    
+                        <div class="button">
+                          <input type="submit" value="SUBMIT">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-e590"><div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-small-text u-text u-text-variant u-text-1"><b>ABOUT</b><br/>This website belongs to the repective owner. Created by the students of NUST, Islamabad.</p>
+    <p><b>LANGUAGE</b><br/>English</p>
+    <p><b>QUICK LINKS</b><br/><a href="Home.html#about">About Us</a><br/><a href="Home.html#contact">Contact Us</a></p>
+    </div></footer>
+  <section class="u-backlink u-clearfix u-grey-80">
+    <p class="u-text">
+      <span>Copyright © 2021 All Rights Reserved by Team MEDIcare.</span>
+    </p> 
+  </section>
+  </body>
+
+  <!-- Code to ADD or REMOVE Text-->
+  <script type="text/javascript">
+   //for certificates
+    $(document).ready(function(){
+        var maxField = 10; //Input fields increment limitation
+        var addButton = $('.add_button_3'); //Add button selector
+        var wrapper = $('.field_wrapper_3'); //Input field wrapper
+        var fieldHTML = '<div class="input-box"><span class="details">Certificate Name</span><input type="text" placeholder="Certificate Name" required><span class="details">Organization</span><input type="text" placeholder="Organization" required><span class="details">Certificate Link</span><input type="text" placeholder="Certificate Link" required><a href="javascript:void(0);" class="remove_button_3"><i style="font-size: 20px; color: steelblue" class="fa fa-minus-circle"></i></a></div>'; //New input field html 
+        var x = 1; //Initial field counter is 1
+        
+        //Once add button is clicked
+        $(addButton).click(function(){
+            //Check maximum number of input fields
+            if(x < maxField){ 
+                x++; //Increment field counter
+                $(wrapper).append(fieldHTML); //Add field html
+            }
+        });
+        
+        //Once remove button is clicked
+        $(wrapper).on('click', '.remove_button_3', function(e){
+            e.preventDefault();
+            $(this).parent('div').remove(); //Remove field html
+            x--; //Decrement field counter
+        });
+    });
+
+    //for education
+    $(document).ready(function(){
+        var maxField = 5; //Input fields increment limitation
+        var addButton = $('.add_button_1'); //Add button selector
+        var wrapper = $('.field_wrapper_1'); //Input field wrapper
+        var fieldHTML = '<div class="input-box"><span class="details">Degree Name</span><input type="text" placeholder="Doctor Name" required><span class="details">Institute Name</span><input type="text" placeholder="Institute Name" required><a href="javascript:void(0);" class="remove_button_1"><i style="font-size: 20px; color: steelblue" class="fa fa-minus-circle"></i></a></div>'; //New input field html 
+        var x = 1; //Initial field counter is 1
+        
+        //Once add button is clicked
+        $(addButton).click(function(){
+            //Check maximum number of input fields
+            if(x < maxField){ 
+                x++; //Increment field counter
+                $(wrapper).append(fieldHTML); //Add field html
+            }
+        });
+        
+        //Once remove button is clicked
+        $(wrapper).on('click', '.remove_button_1', function(e){
+            e.preventDefault();
+            $(this).parent('div').remove(); //Remove field html
+            x--; //Decrement field counter
+        });
+    });
+
+    //for experience
+    $(document).ready(function(){
+        var maxField = 5; //Input fields increment limitation
+        var addButton = $('.add_button_2'); //Add button selector
+        var wrapper = $('.field_wrapper_2'); //Input field wrapper
+        var fieldHTML = '<div class="input-box"><span class="details">Health Sector Name</span><input type="text" placeholder="Health Sector Name" required><span class="details">Position</span><input type="text" placeholder="Position" required><span class="details">Years of Experience</span><input type="text" placeholder="Years of Experience" required><a href="javascript:void(0);" class="remove_button_2"><i style="font-size: 20px; color: steelblue" class="fa fa-minus-circle"></i></a></div>'; //New input field html 
+        var x = 1; //Initial field counter is 1
+        
+        //Once add button is clicked
+        $(addButton).click(function(){
+            //Check maximum number of input fields
+            if(x < maxField){ 
+                x++; //Increment field counter
+                $(wrapper).append(fieldHTML); //Add field html
+            }
+        });
+        
+        //Once remove button is clicked
+        $(wrapper).on('click', '.remove_button_2', function(e){
+            e.preventDefault();
+            $(this).parent('div').remove(); //Remove field html
+            x--; //Decrement field counter
+        });
+    });
+    </script>
+
+</html>
