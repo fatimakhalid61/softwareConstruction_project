@@ -41,7 +41,8 @@ class AppointmentController extends Controller
         try {
             Appointment::create([
                 'user_id' => $user->id,
-                'time' => Carbon::parse($request->date)->toDateTimeString()
+                'time' => Carbon::parse($request->date)->toDateTimeString(),
+                'time_slot' => $request->time_slot
             ]);
             return response()->json([
                 'message' => 'Appointment recorded',
