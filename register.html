@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="project.css" media="screen">
     <link rel="stylesheet" href="Home.css" media="screen">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script> -->
     <script class="u-script" type="text/javascript" src="project.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Oswald:200,300,400,500,600,700">
@@ -67,7 +68,7 @@
                           <br>
                           <label class="radio">
                             <span class="radio__input">
-                              <input type="radio" name="radio" />
+                              <input type="radio" name="user_type" value="DOCTOR" />
                               <span class="radio__control"></span>
                             </span>
                             <span class="radio__label">
@@ -78,7 +79,7 @@
 
                           <label class="radio">
                             <span class="radio__input">
-                              <input type="radio" name="radio" />
+                              <input type="radio" name="user_type" value="PATIENT" />
                               <span class="radio__control"></span>
                             </span>
                             <span class="radio__label">Patient</span>
@@ -90,27 +91,27 @@
                             
                           <div class="input-box">
                             <span class="details">Full Name</span>
-                            <input type="text" placeholder="Enter your name" required>
+                            <input type="text" placeholder="Enter your name" name="full_name" required>
                           </div>
                           <div class="input-box">
                             <span class="details">Username</span>
-                            <input type="text" placeholder="Enter your username" required>
+                            <input type="text" placeholder="Enter your username" name="user_name" required>
                           </div>
                           <div class="input-box">
                             <span class="details">Email</span>
-                            <input type="text" placeholder="Enter your email" required>
+                            <input type="text" placeholder="Enter your email" name="email" required>
                           </div>
                           <div class="input-box">
                             <span class="details">Phone Number</span>
-                            <input type="text" placeholder="Enter your number" required>
+                            <input type="text" placeholder="Enter your number" name="phone"  required>
                           </div>
                           <div class="input-box">
                             <span class="details">Password</span>
-                            <input type="password" placeholder="Enter your password" required>
+                            <input type="password" placeholder="Enter your password" name="password" required>
                           </div>
                           <div class="input-box">
                             <span class="details">Confirm Password</span>
-                            <input type="password" placeholder="Confirm your password" required>
+                            <input type="password" placeholder="Confirm your password" name="confirm_password" required>
                           </div>
                         </div>
 
@@ -119,7 +120,7 @@
                           <br>
                           <label class="radio">
                             <span class="radio__input">
-                              <input type="radio" name="radio" />
+                              <input type="radio" name="gender" value="Male" />
                               <span class="radio__control"></span>
                             </span>
                             <span class="radio__label"> Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -127,7 +128,7 @@
 
                           <label class="radio">
                             <span class="radio__input">
-                              <input type="radio" name="radio" />
+                              <input type="radio" name="gender" value="Female" />
                               <span class="radio__control"></span>
                             </span>
                             <span class="radio__label"> Female &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -135,14 +136,14 @@
 
                           <label class="radio">
                             <span class="radio__input">
-                              <input type="radio" name="radio" />
+                              <input type="radio" name="gender" value="Not Specified" />
                               <span class="radio__control"></span>
                             </span>
                             <span class="radio__label">Prefer Not to Say</span>
                           </label>
                         </div>
                         <div class="button">
-                          <input type="submit" value="REGISTER">
+                          <input type="submit" value="REGISTER" id="registration">
                         </div>
                       </form>
                     </div>
@@ -159,5 +160,38 @@
         <span>Copyright © 2021 All Rights Reserved by Team MEDIcare.</span>
       </p> 
     </section>
+    <script>
+      $('#registration').click((event) => {
+        event.preventDefault()
+        let payload = {
+          user_type : $('input[name="user_type"]:checked').val(),
+          full_name : $('input[name="full_name"]').val(),
+          user_name : $('input[name="user_name"]').val(),
+          phone : $('input[name="phone"]').val(),
+          email : $('input[name="email"]').val(),
+          password : $('input[name="password"]').val(),
+          confirm_password : $('input[name="confirm_password"]').val(),
+          gender : $('input[name="gender"]:checked').val(),   
+        }
+        var request = $.ajax({
+          url: "http://127.0.0.1:8000/api/register",
+          method: "POST",
+          data: payload,
+        });
+        
+        request.done(function( response ) {
+          window.location.href = 'login.html'
+          console.log(response);
+           
+        });
+        
+        request.fail(function( jqXHR, textStatus ) {
+          let error = JSON.parse(jqXHR.responseText);
+          error.message.forEach(element => {
+              $('#message-section').append('<li>'+element+'</li>');
+          });
+        });
+      });
+  </script>
   </body>
 </html>
